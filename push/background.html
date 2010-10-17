@@ -1,0 +1,25 @@
+<script type="text/javascript" src="lib.js"></script>
+<script>
+
+function push (node, tab) {
+    chrome.bookmarks.create({
+            parentId : node.id,
+            title    : tab.title,
+            url      : tab.url,
+            index    : 0
+        },
+        function (bookmark) {
+            chrome.tabs.remove(tab.id);
+        }
+    );
+}
+
+function checkFolderAndPush(tab) {
+    checkFolderAndCall(function (folder) {
+        push(folder, tab);
+    });
+}
+
+chrome.browserAction.onClicked.addListener(checkFolderAndPush);
+
+</script>

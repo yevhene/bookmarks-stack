@@ -1,0 +1,16 @@
+{
+    "name": "Pull",
+    "version": "1.0",
+    "description": "Pull web page from bookmarks.",
+    "background_page": "background.html",
+    "browser_action": {
+        "default_icon": "pull.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
+
