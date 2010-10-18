@@ -1,0 +1,14 @@
+{
+    "name": "Bookmarks Stack (Underlay)",
+    "version": "1.0",
+    "description": "Underlay web page on bottom of bookmark stack.",
+    "background_page": "background.html",
+    "browser_action": {
+        "default_icon": "underlay.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks"
+    ]
+}
+

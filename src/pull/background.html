@@ -7,7 +7,7 @@ function pull (node, tab) {
             node.id,
             function(children) {
                 node.children = children;
-                pull (node, tab);
+                pull(node, tab);
             }
         );
         return;

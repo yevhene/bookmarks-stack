@@ -1,0 +1,38 @@
+<script type="text/javascript" src="lib.js"></script>
+<script>
+
+function underlay (node, tab) {
+    if(node.children === undefined) {
+        chrome.bookmarks.getChildren(
+            node.id,
+            function(children) {
+                node.children = children;
+                underlay(node, tab);
+            }
+        );
+        return;
+    }
+    if(!node.children) {
+        return;
+    }
+    chrome.bookmarks.create({
+            parentId : node.id,
+            title    : tab.title,
+            url      : tab.url,
+            index    : node.children.length
+        },
+        function (bookmark) {
+            chrome.tabs.remove(tab.id);
+        }
+    );
+}
+
+function checkFolderAndUnderlay(tab) {
+    checkFolderAndCall(function (folder) {
+        underlay(folder, tab);
+    });
+}
+
+chrome.browserAction.onClicked.addListener(checkFolderAndUnderlay);
+
+</script>
