@@ -1,5 +1,5 @@
 var extensionsBookmarksFolderName = 'Extensions Bookmarks';
-var pushPullFolderName = 'Push-Pull';
+var pushPullFolderName = 'Bookmarks Stack';
 
 var pushPullBookmarksFolderID = null;
 
