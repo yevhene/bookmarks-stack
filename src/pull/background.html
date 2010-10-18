@@ -15,7 +15,7 @@ function pull (node, tab) {
     if(!node.children || node.children.length == 0) {
         return;
     }
-    var bookmark = node.children[0];
+    var bookmark = node.children[node.children.length-1];
     chrome.tabs.create({
             url   : bookmark.url,
             index : tab.index + 1

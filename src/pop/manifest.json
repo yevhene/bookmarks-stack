@@ -1,0 +1,14 @@
+{
+    "name": "Bookmarks Stack (Pop)",
+    "version": "1.0",
+    "description": "Pop web page from top of bookmark stack.",
+    "background_page": "background.html",
+    "browser_action": {
+        "default_icon": "pop.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks"
+    ]
+}
+

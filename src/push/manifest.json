@@ -1,16 +1,14 @@
 {
-    "name": "Push",
+    "name": "Bookmarks Stack (Push)",
     "version": "1.0",
-    "description": "Push web page to bookmarks.",
+    "description": "Push web page on top of bookmark stack.",
     "background_page": "background.html",
     "browser_action": {
         "default_icon": "push.png"
     },
     "permissions": [
         "tabs",
-        "bookmarks",
-        "http://*/*",
-        "https://*/*"
+        "bookmarks"
     ]
 }
 
