@@ -7,7 +7,7 @@ function pop (node, tab) {
             node.id,
             function(children) {
                 node.children = children;
-                pull (node, tab);
+                pop (node, tab);
             }
         );
         return;
